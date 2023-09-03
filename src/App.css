@@ -1,0 +1,165 @@
+.app {
+  height: 100vh;
+  background-color: #020203;
+  color: white;
+  display: flex;
+}
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("./assets/bg.jpg") center;
+  display: flex;
+  flex-direction: column;
+}
+.top,
+.bottom {
+  height: 50%;
+}
+.top {
+  position: relative;
+}
+.timer {
+  position: absolute;
+  left: 84px;
+  bottom: 20px;
+}
+.pyramid {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moneyList {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.moneyListItem {
+  /* width: 100%; */
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.moneyListItem.active {
+  background-color: #076796;
+  border-radius: 5px;
+}
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-size: 25pt;
+}
+.questionsections {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.question {
+  width: 80%;
+  padding: 15px;
+  background-color: black;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: space-between;
+}
+.answer {
+  background: linear-gradient(#020250, black);
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  width: 40%;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+}
+.answer:hover,
+.answer.active {
+  background: #4a0cdc;
+  font-weight: 600;
+  cursor: pointer;
+}
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#020250, black);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#020250, black);
+  }
+  62%,
+  100% {
+    background: red;
+  }
+}
+
+.earnmoney {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.startButton {
+  margin: auto;
+  position: relative;
+  width: 300px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.startButton button {
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 140, 25, 0.6);
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.startButton button:hover {
+  cursor: pointer;
+}
